@@ -329,11 +329,11 @@
 <script type="text/javascript">
 	$('#monitor-projects').DataTable({
       "paging": true,
-      "lengthChange": false,
+      "lengthChange": true,
       "searching": true,
       "ordering": false,
       "info": false,
-      "autoWidth": false
+      "autoWidth": true
     });
     $(function() {
     	var pieImplChartCanvas = $("#pieImpl").get(0).getContext("2d");

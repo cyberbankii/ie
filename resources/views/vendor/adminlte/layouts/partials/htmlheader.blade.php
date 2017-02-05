@@ -6,6 +6,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <link href="{{ asset('/css/all.css') }}" rel="stylesheet" type="text/css" />
+    <link href="/local/css/app.css" rel="stylesheet" type="text/css" />
 
     <script>
         window.Laravel = {!! json_encode([

@@ -7,6 +7,7 @@
 
     <link href="{{ asset('/css/all.css') }}" rel="stylesheet" type="text/css" />
     <link href="/local/css/app.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="/plugins/datatables/dataTables.bootstrap.css">
 
     <script>
         window.Laravel = {!! json_encode([

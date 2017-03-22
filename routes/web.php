@@ -22,4 +22,8 @@ Route::group(['middleware' => 'auth'], function () {
    Route::resource('/campaigns', 'CampaignsController');
 
    Route::resource('/situations', 'SituationsController');
+
+   Route::resource('/actions', 'ActionsController');
+
+   Route::get('/api/{id}/options', 'OptionsController@index');
 });

@@ -1,0 +1,98 @@
+@extends('adminlte::layouts.app')
+@section('content-header-title')
+<section class="content-header">
+    <h1>
+       	Action
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="/campaigns"><i class="fa fa-tasks"></i>Actions</a></li>
+        <li class="active">edit</li>
+    </ol>
+</section>
+@endsection
+@section('main-content')
+<div class="container">
+	<div class="row" style="background-color: white; padding-top: 50px; padding-bottom: 20px">
+		<div class="col-md-offset-1 col-md-10">
+			<form action="/actions/{{ $action->id }}" method="POST" role="form">
+				{{ csrf_field() }}
+				<div class="form-group">
+				    <label for="name"><b>Name</b></label>
+				    <input type="text" class="form-control" name="name" value="{{ $action->name }}">
+				    <input type="hidden" name="_method" value="PUT">   
+				</div>
+				<div class="form-group">
+				    <label for="name"><b>API</b></label>
+				    <select name="api" id="input" class="form-control">
+				    	<option value="0">Please select API</option>
+				    	@foreach($apis as $api)
+				    		@if($action->api_id==$api->id)
+				    		<option value="{{ $api->id }}" selected>{{ $api->name }}</option>
+				    		@else
+				    		<option value="{{ $api->id }}">{{ $api->name }}</option>
+				    		@endif
+				    	@endforeach
+				    </select>
+				    <input type="hidden" name="_method" value="PUT">   
+				</div>
+				<div class="form-group">
+					<label for="options"><b>Options</b></label>
+					<div class="checkbox" id='options' style="margin-top: -2px"></div>
+					<input type="hidden" name="_method" value="PUT">   
+				</div>
+				<div class="form-group pull-right">
+				  	<button type="submit" class="btn btn-default">Save</button>
+				  	<button type="button" class="btn btn-default">Cancel</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+@endsection
+@section('append-scripts')
+<script type="text/javascript">
+	
+	$(document).ready(function() {
+		$.ajax('/api/'+{!! $action->api_id !!}+'/options').done(function(data) {
+			buildOptions(data);
+		});
+	});
+
+	$('select[name="api"]').on('change', function() {
+		let apiId = $(this).val();
+		$.ajax('/api/'+apiId+'/options').done(function(data) {
+			buildOptions(data);
+		});
+	});
+
+	function buildOptions($options) {
+		let html = '';
+		for(let index in $options['options']) {
+			if(isChecked($options['options'][index]['id'])) {
+				html += '<label>\
+						<input type="checkbox" name="options[]" value="'+$options['options'][index]['id']+'" checked>'
+							+$options['options'][index]['name']+'\
+						</label><br>';
+			}
+			else {	
+				html += '<label>\
+						<input type="checkbox" name="options[]" value="'+$options['options'][index]['id']+'">'
+							+$options['options'][index]['name']+'\
+						</label><br>';
+			}
+		}
+		$('#options').html(html);
+	}
+
+	function isChecked(id) {
+		let checked = {!! $action->options !!};
+		for(let index in checked) {
+			if(checked[index]['id']==id) {
+				return true;
+			}
+		}
+		return false;
+	}
+
+</script>
+@endsection

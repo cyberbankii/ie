@@ -35,6 +35,7 @@
             <li class="{{ Request::is('monitor*')? 'active' : '' }}"><a href="{{ url('monitor') }}"><i class='fa fa-desktop'></i> <span><b>Monitor</b></span></a></li>
             <li class="{{ Request::is('campaigns*')? 'active' : '' }}"><a href="{{ url('campaigns') }}"><i class='fa fa-tasks'></i> <span><b>Campaigns</b></span></a></li>
             <li class="{{ Request::is('situations*')? 'active' : '' }}"><a href="{{ url('situations') }}"><i class='fa fa-video-camera'></i> <span><b>Situations</b></span></a></li>
+            <li class="{{ Request::is('actions*')? 'active' : '' }}"><a href="{{ url('actions') }}"><i class='fa fa-cog'></i> <span><b>Actions</b></span></a></li>
             {{-- <li><a href="#"><i class='fa fa-user'></i> <span><b>Users</b></span></a></li> --}}
         </ul><!-- /.sidebar-menu -->
     </section>

@@ -23,7 +23,7 @@ class CampaignsController extends Controller
      */
     public function create()
     {
-        //
+        return view('campaigns.create');
     }
 
     /**
@@ -56,7 +56,7 @@ class CampaignsController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('campaigns.edit');
     }
 
     /**

@@ -3,9 +3,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Api;
+use App\Action;
 
-class SituationsController extends Controller
+class ActionsController extends Controller
 {
+    public function __construct() {
+        $this->middleware('auth');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -13,7 +18,8 @@ class SituationsController extends Controller
      */
     public function index()
     {
-        return view('situations.index');
+        $actions = Action::all();
+        return view('actions.index')->withActions($actions);
     }
 
     /**
@@ -23,7 +29,8 @@ class SituationsController extends Controller
      */
     public function create()
     {
-        return view('situations.create');
+        $apis = Api::all();
+        return view('actions.create')->withApis($apis);
     }
 
     /**
@@ -34,18 +41,12 @@ class SituationsController extends Controller
      */
     public function store(Request $request)
     {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
+        $action = Action::create([
+                    'name' => $request->name,
+                    'api_id' => $request->api
+                  ]);
+        $action->options()->sync($request->options);
+        return redirect('/actions');
     }
 
     /**
@@ -56,7 +57,10 @@ class SituationsController extends Controller
      */
     public function edit($id)
     {
-        return view('situations.edit');
+        $action = Action::find($id);
+        $apis = Api::all();
+        return view('actions.edit')->withAction($action)
+                                     ->withApis($apis);
     }
 
     /**
@@ -68,7 +72,14 @@ class SituationsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $action = Action::find($id);
+        $action->name = $request->name;
+        $action->api_id = $request->api;
+        $action->save();
+
+        $action->options()->sync($request->options);
+
+        return redirect('/actions');
     }
 
     /**
@@ -79,6 +90,9 @@ class SituationsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $action = Action::find($id);
+        $action->delete();
+
+        return redirect('/actions');
     }
 }

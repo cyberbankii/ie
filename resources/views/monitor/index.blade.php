@@ -49,250 +49,39 @@
 	              <h3 class="box-title">All Project</h3>
 	            </div> --}}
 	            <div class="box-body">
-	              <table id="monitor-projects" class="table table-bordered table-striped">
-	                <thead>
-		                <tr>
-		                  <th>Campaigns</th>
-		                  <th><center>Situations</center></th>
-		                  <th><center>Status</center></th>
-		                  <th><center>Period</center></th>
-		                  <th><center>Actions</center></th>
-		                </tr>
-	                </thead>
-	                <tbody>
-		                <tr>
-		                  <td>AIS-LOVElove</td>
-		                  <td>
-		                  	<ul>
-		                  		<li>Weather-Keyword</li>
-		                  		<li>Exchange-Keyword</li>
-		                  	</ul>
-		                  </td>
-		                  <td><center><small class="label label-success"></i>Active</small></center></td>
-		                  <td><center>2017/01/01 - 2017-05-01</center></td>
-		                  <td>
-		                  	<center>
-			                  <button type="button" class="btn bg-yellow margin"><i class="fa fa-pause"></i></button>
-			              	</center>
-			              </td>
-		                </tr>
-		                <tr>
-		                  <td>AIS-LOVElove</td>
-		                  <td>
-		                  	<ul>
-		                  		<li>Weather-Keyword</li>
-		                  		<li>Exchange-Keyword</li>
-		                  		<li>Keyword</li>
-		                  	</ul>
-		                  </td>
-		                  <td><center><small class="label label-warning"></i>Pause</small></center></td>
-		                  <td><center>2017/01/01 - 2017-05-01</center></td>
-		                  <td>
-		                  	<center>
-			                  <button type="button" class="btn bg-green margin"><i class="fa fa-play"></i></button>
-			              	</center>
-			              </td>
-		                </tr>
-		                <tr>
-		                  <td>AIS-LOVElove</td>
-		                  <td>
-		                  	<ul>
-		                  		<li>Weather-Keyword</li>
-		                  		<li>Exchange-Keyword</li>
-		                  	</ul>
-		                  </td>
-		                  <td><center><small class="label label-success"></i>Active</small></center></td>
-		                  <td><center>2017/01/01 - 2017-05-01</center></td>
-		                  <td>
-		                  	<center>
-			                  <button type="button" class="btn bg-yellow margin"><i class="fa fa-pause"></i></button>
-			              	</center>
-			              </td>
-		                </tr>
-		                <tr>
-		                  <td>AIS-LOVElove</td>
-		                  <td>
-		                  	<ul>
-		                  		<li>Weather-Keyword</li>
-		                  		<li>Exchange-Keyword</li>
-		                  		<li>Keyword</li>
-		                  	</ul>
-		                  </td>
-		                  <td><center><small class="label label-warning"></i>Pause</small></center></td>
-		                  <td><center>2017/01/01 - 2017-05-01</center></td>
-		                  <td>
-		                  	<center>
-			                  <button type="button" class="btn bg-green margin"><i class="fa fa-play"></i></button>
-			              	</center>
-			              </td>
-		                </tr>
-		                <tr>
-		                  <td>AIS-LOVElove</td>
-		                  <td>
-		                  	<ul>
-		                  		<li>Weather-Keyword</li>
-		                  		<li>Exchange-Keyword</li>
-		                  	</ul>
-		                  </td>
-		                  <td><center><small class="label label-success"></i>Active</small></center></td>
-		                  <td><center>2017/01/01 - 2017-05-01</center></td>
-		                  <td>
-		                  	<center>
-			                  <button type="button" class="btn bg-yellow margin"><i class="fa fa-pause"></i></button>
-			              	</center>
-			              </td>
-		                </tr>
-		                <tr>
-		                  <td>AIS-LOVElove</td>
-		                  <td>
-		                  	<ul>
-		                  		<li>Weather-Keyword</li>
-		                  		<li>Exchange-Keyword</li>
-		                  		<li>Keyword</li>
-		                  	</ul>
-		                  </td>
-		                  <td><center><small class="label label-warning"></i>Pause</small></center></td>
-		                  <td><center>2017/01/01 - 2017-05-01</center></td>
-		                  <td>
-		                  	<center>
-			                  <button type="button" class="btn bg-green margin"><i class="fa fa-play"></i></button>
-			              	</center>
-			              </td>
-		                </tr>
-		                <tr>
-		                  <td>AIS-LOVElove</td>
-		                  <td>
-		                  	<ul>
-		                  		<li>Weather-Keyword</li>
-		                  		<li>Exchange-Keyword</li>
-		                  	</ul>
-		                  </td>
-		                  <td><center><small class="label label-success"></i>Active</small></center></td>
-		                  <td><center>2017/01/01 - 2017-05-01</center></td>
-		                  <td>
-		                  	<center>
-			                  <button type="button" class="btn bg-yellow margin"><i class="fa fa-pause"></i></button>
-			              	</center>
-			              </td>
-		                </tr>
-		                <tr>
-		                  <td>AIS-LOVElove</td>
-		                  <td>
-		                  	<ul>
-		                  		<li>Weather-Keyword</li>
-		                  		<li>Exchange-Keyword</li>
-		                  		<li>Keyword</li>
-		                  	</ul>
-		                  </td>
-		                  <td><center><small class="label label-warning"></i>Pause</small></center></td>
-		                  <td><center>2017/01/01 - 2017-05-01</center></td>
-		                  <td>
-		                  	<center>
-			                  <button type="button" class="btn bg-green margin"><i class="fa fa-play"></i></button>
-			              	</center>
-			              </td>
-		                </tr>
-		                <tr>
-		                  <td>AIS-LOVElove</td>
-		                  <td>
-		                  	<ul>
-		                  		<li>Weather-Keyword</li>
-		                  		<li>Exchange-Keyword</li>
-		                  	</ul>
-		                  </td>
-		                  <td><center><small class="label label-success"></i>Active</small></center></td>
-		                  <td><center>2017/01/01 - 2017-05-01</center></td>
-		                  <td>
-		                  	<center>
-			                  <button type="button" class="btn bg-yellow margin"><i class="fa fa-pause"></i></button>
-			              	</center>
-			              </td>
-		                </tr>
-		                <tr>
-		                  <td>AIS-LOVElove</td>
-		                  <td>
-		                  	<ul>
-		                  		<li>Weather-Keyword</li>
-		                  		<li>Exchange-Keyword</li>
-		                  		<li>Keyword</li>
-		                  	</ul>
-		                  </td>
-		                  <td><center><small class="label label-warning"></i>Pause</small></center></td>
-		                  <td><center>2017/01/01 - 2017-05-01</center></td>
-		                  <td>
-		                  	<center>
-			                  <button type="button" class="btn bg-green margin"><i class="fa fa-play"></i></button>
-			              	</center>
-			              </td>
-		                </tr>
-		                <tr>
-		                  <td>AIS-LOVElove</td>
-		                  <td>
-		                  	<ul>
-		                  		<li>Weather-Keyword</li>
-		                  		<li>Exchange-Keyword</li>
-		                  	</ul>
-		                  </td>
-		                  <td><center><small class="label label-success"></i>Active</small></center></td>
-		                  <td><center>2017/01/01 - 2017-05-01</center></td>
-		                  <td>
-		                  	<center>
-			                  <button type="button" class="btn bg-yellow margin"><i class="fa fa-pause"></i></button>
-			              	</center>
-			              </td>
-		                </tr>
-		                <tr>
-		                  <td>AIS-LOVElove</td>
-		                  <td>
-		                  	<ul>
-		                  		<li>Weather-Keyword</li>
-		                  		<li>Exchange-Keyword</li>
-		                  		<li>Keyword</li>
-		                  	</ul>
-		                  </td>
-		                  <td><center><small class="label label-warning"></i>Pause</small></center></td>
-		                  <td><center>2017/01/01 - 2017-05-01</center></td>
-		                  <td>
-		                  	<center>
-			                  <button type="button" class="btn bg-green margin"><i class="fa fa-play"></i></button>
-			              	</center>
-			              </td>
-		                </tr>
-		                <tr>
-		                  <td>AIS-LOVElove</td>
-		                  <td>
-		                  	<ul>
-		                  		<li>Weather-Keyword</li>
-		                  		<li>Exchange-Keyword</li>
-		                  	</ul>
-		                  </td>
-		                  <td><center><small class="label label-success"></i>Active</small></center></td>
-		                  <td><center>2017/01/01 - 2017-05-01</center></td>
-		                  <td>
-		                  	<center>
-			                  <button type="button" class="btn bg-yellow margin"><i class="fa fa-pause"></i></button>
-			              	</center>
-			              </td>
-		                </tr>
-		                <tr>
-		                  <td>AIS-LOVElove</td>
-		                  <td>
-		                  	<ul>
-		                  		<li>Weather-Keyword</li>
-		                  		<li>Exchange-Keyword</li>
-		                  		<li>Keyword</li>
-		                  	</ul>
-		                  </td>
-		                  <td><center><small class="label label-warning"></i>Pause</small></center></td>
-		                  <td><center>2017/01/01 - 2017-05-01</center></td>
-		                  <td>
-		                  	<center>
-			                  <button type="button" class="btn bg-green margin"><i class="fa fa-play"></i></button>
-			              	</center>
-			              </td>
-		                </tr>
-	                </tbody>
-	              </table>
+	              <div class="container">
+		              <table id="monitor-projects" class="table table-bordered table-striped">
+		                <thead>
+			                <tr>
+			                  <th>Campaigns</th>
+			                  <th><center>Situations</center></th>
+			                  <th><center>Status</center></th>
+			                  <th><center>Period</center></th>
+			                  <th><center>Actions</center></th>
+			                </tr>
+		                </thead>
+		                <tbody>
+		                	@for($i=0;$i<20;$i++)
+			                <tr>
+			                  <td>AIS-LOVElove</td>
+			                  <td>
+			                  	<ul>
+			                  		<li>Weather-Keyword</li>
+			                  		<li>Exchange-Keyword</li>
+			                  	</ul>
+			                  </td>
+			                  <td><center><small class="label label-success"></i>Active</small></center></td>
+			                  <td><center>2017/01/01 - 2017-05-01</center></td>
+			                  <td>
+			                  	<center>
+				                  <button type="button" class="btn bg-yellow margin"><i class="fa fa-pause"></i></button>
+				              	</center>
+				              </td>
+			                </tr>
+			                @endfor
+		                </tbody>
+		              </table>
+	              </div>
 	            </div>
 	        </div>
           </div>

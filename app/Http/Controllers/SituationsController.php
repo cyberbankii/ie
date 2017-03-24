@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Api;
+use App\Situation;
 
 class SituationsController extends Controller
 {
@@ -13,7 +15,8 @@ class SituationsController extends Controller
      */
     public function index()
     {
-        return view('situations.index');
+        $situations = Situation::all();
+        return view('situations.index')->withSituations($situations);
     }
 
     /**
@@ -23,7 +26,8 @@ class SituationsController extends Controller
      */
     public function create()
     {
-        return view('situations.create');
+        $apis = Api::where('cause_id', '=', 1)->get();
+        return view('situations.create')->withApis($apis);
     }
 
     /**
@@ -34,7 +38,12 @@ class SituationsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $situation = Situation::create([
+                    'name' => $request->name,
+                    'api_id' => $request->api
+                  ]);
+        $situation->options()->sync($request->options);
+        return redirect('/situations');
     }
 
     /**
@@ -56,7 +65,10 @@ class SituationsController extends Controller
      */
     public function edit($id)
     {
-        return view('situations.edit');
+        $situation = Situation::find($id);
+        $apis = Api::all();
+        return view('situations.edit')->withSituation($situation)
+                                     ->withApis($apis);
     }
 
     /**
@@ -68,7 +80,14 @@ class SituationsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $situation = Situation::find($id);
+        $situation->name = $request->name;
+        $situation->api_id = $request->api;
+        $situation->save();
+
+        $situation->options()->sync($request->options);
+
+        return redirect('/situations');
     }
 
     /**
@@ -79,6 +98,9 @@ class SituationsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $situation = Situation::find($id);
+        $situation->delete();
+
+        return redirect('/situations');
     }
 }

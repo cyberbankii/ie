@@ -12,4 +12,8 @@ class Api extends Model
     public function options() {
     	return $this->belongsToMany('App\Option');
     }
+
+    public function cause() {
+    	return $this->belongsTo('App\Cause');
+    }
 }

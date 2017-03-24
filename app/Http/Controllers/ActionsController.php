@@ -29,7 +29,7 @@ class ActionsController extends Controller
      */
     public function create()
     {
-        $apis = Api::all();
+        $apis = Api::where('api_id', '=', 2)->get();
         return view('actions.create')->withApis($apis);
     }
 
